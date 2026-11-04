@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane prefWidth="680.0" prefHeight="560.0"
+           styleClass="app-screen"
+           stylesheets="@css/style.css"
+           xmlns="http://javafx.com/javafx/17.0.12"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="com.senai.mecanica.HelloController">
+    <VBox alignment="CENTER" spacing="16" maxWidth="390" styleClass="login-card">
+        <padding><Insets top="38" right="42" bottom="38" left="42"/></padding>
+        <Label text="OFICINA MECÂNICA" styleClass="page-kicker"/>
+        <Label text="Bem-vindo!" styleClass="page-title"/>
+        <Label text="Acesse o sistema de gerenciamento da oficina" styleClass="subtitle" wrapText="true"/>
+        <Region prefHeight="8"/>
+        <VBox spacing="7" maxWidth="Infinity">
+            <Label text="Usuário" styleClass="field-label"/>
+            <TextField fx:id="txtLogin" promptText="Digite seu usuário" styleClass="campo" maxWidth="Infinity"/>
+        </VBox>
+        <VBox spacing="7" maxWidth="Infinity">
+            <Label text="Senha" styleClass="field-label"/>
+            <PasswordField fx:id="txtSenha" promptText="Digite sua senha" styleClass="campo" maxWidth="Infinity"/>
+        </VBox>
+        <Button text="ENTRAR NO SISTEMA" mnemonicParsing="false" onAction="#entrar" styleClass="primary-button login-action" maxWidth="Infinity"/>
+        <Label text="Sistema de gestão e controle de serviços" styleClass="helper-text"/>
+    </VBox>
+</StackPane>

@@ -1,0 +1,11 @@
+OFICINA MECÂNICA - ESTILIZAÇÃO
+
+O CSS principal está em:
+src/main/resources/com/senai/mecanica/css/style.css
+
+Todos os seis arquivos FXML foram vinculados ao mesmo CSS por meio de:
+stylesheets="@css/style.css"
+
+Abra a pasta mecanica no IntelliJ IDEA como projeto Maven. Depois execute a aplicação normalmente.
+
+Observação: foram preservados os fx:id, controllers e onAction. A estilização não altera regras de negócio nem conexão com banco de dados.

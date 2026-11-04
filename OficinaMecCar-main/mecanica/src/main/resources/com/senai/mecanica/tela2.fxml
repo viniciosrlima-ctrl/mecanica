@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane prefWidth="760.0" prefHeight="600.0"
+           styleClass="app-screen"
+           stylesheets="@css/style.css"
+           xmlns="http://javafx.com/javafx/17.0.12"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="com.senai.mecanica.Tela2Controller">
+    <VBox alignment="CENTER" spacing="18" maxWidth="470" styleClass="menu-card">
+        <padding><Insets top="38" right="42" bottom="38" left="42"/></padding>
+        <Label text="PAINEL DE CONTROLE" styleClass="page-kicker"/>
+        <Label text="Oficina Mecânica" styleClass="page-title"/>
+        <Label text="Selecione uma opção para continuar" styleClass="subtitle"/>
+        <Region prefHeight="8"/>
+        <Button text="CADASTRAR CLIENTE" onAction="#cadastrarCliente" styleClass="primary-button menu-action"/>
+        <Button text="CADASTRAR VEÍCULO" onAction="#cadastrarVeiculo" styleClass="primary-button menu-action"/>
+        <Button text="ORDENS DE SERVIÇO" onAction="#ordenDeServico" styleClass="primary-button menu-action"/>
+        <Label text="Gestão de clientes, veículos e serviços" styleClass="helper-text"/>
+    </VBox>
+</StackPane>

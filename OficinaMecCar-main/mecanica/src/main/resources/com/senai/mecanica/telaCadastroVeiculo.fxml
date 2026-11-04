@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<ScrollPane fitToWidth="true" prefViewportWidth="760" prefViewportHeight="650"
+            stylesheets="@css/style.css" styleClass="app-screen"
+            xmlns="http://javafx.com/javafx/17.0.12"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.senai.mecanica.TelaCadastroVeiculoController">
+    <content>
+        <VBox alignment="TOP_CENTER" spacing="20" styleClass="page-shell">
+            <VBox spacing="6" maxWidth="760" styleClass="page-header">
+                <Label text="CADASTROS" styleClass="page-kicker"/>
+                <Label text="Cadastrar veículo" styleClass="page-title"/>
+                <Label text="Registre os dados e o histórico do veículo do cliente." styleClass="subtitle"/>
+            </VBox>
+            <VBox spacing="18" maxWidth="760" styleClass="form-card">
+                <Label text="Informações do veículo" styleClass="section-heading"/>
+                <GridPane hgap="16" vgap="14">
+                    <columnConstraints>
+                        <ColumnConstraints percentWidth="28"/>
+                        <ColumnConstraints percentWidth="72" hgrow="ALWAYS"/>
+                    </columnConstraints>
+                    <Label text="Placa" styleClass="field-label" GridPane.rowIndex="0"/>
+                    <TextField fx:id="placaFx" promptText="ABC-1D23" maxWidth="Infinity" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+                    <Label text="Modelo" styleClass="field-label" GridPane.rowIndex="1"/>
+                    <TextField fx:id="modeloFx" promptText="Ex.: Chevrolet Onix" maxWidth="Infinity" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                    <Label text="Ano" styleClass="field-label" GridPane.rowIndex="2"/>
+                    <TextField fx:id="anoFx" promptText="Ex.: 2022" maxWidth="Infinity" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+                    <Label text="Quilometragem" styleClass="field-label" GridPane.rowIndex="3"/>
+                    <TextField fx:id="quilometragemFx" promptText="Quilometragem atual" maxWidth="Infinity" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+                    <Label text="Cor" styleClass="field-label" GridPane.rowIndex="4"/>
+                    <TextField fx:id="corFx" promptText="Ex.: Prata" maxWidth="Infinity" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+                    <Label text="Histórico de manutenção" styleClass="field-label" GridPane.rowIndex="5"/>
+                    <TextField fx:id="historicoDemanutencaoFx" promptText="Informações de manutenções anteriores" maxWidth="Infinity" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+                </GridPane>
+                <Separator/>
+                <HBox spacing="10" alignment="CENTER_RIGHT">
+                    <Button text="Voltar" mnemonicParsing="false" onAction="#voltarTela2" styleClass="secondary-button"/>
+                    <Button text="Cadastrar veículo" mnemonicParsing="false" onAction="#salvarVeiculo" styleClass="primary-button"/>
+                </HBox>
+            </VBox>
+        </VBox>
+    </content>
+</ScrollPane>

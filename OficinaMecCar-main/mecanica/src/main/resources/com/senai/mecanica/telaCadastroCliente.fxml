@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<ScrollPane fitToWidth="true" prefViewportWidth="760" prefViewportHeight="650"
+            stylesheets="@css/style.css" styleClass="app-screen"
+            xmlns="http://javafx.com/javafx/17.0.12"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.senai.mecanica.TelaCadastroClienteController">
+    <content>
+        <VBox alignment="TOP_CENTER" spacing="20" styleClass="page-shell">
+            <VBox spacing="6" maxWidth="760" styleClass="page-header">
+                <Label text="CADASTROS" styleClass="page-kicker"/>
+                <Label text="Cadastrar cliente" styleClass="page-title"/>
+                <Label text="Preencha os dados para registrar um novo cliente." styleClass="subtitle"/>
+            </VBox>
+            <VBox spacing="18" maxWidth="760" styleClass="form-card">
+                <Label text="Informações do cliente" styleClass="section-heading"/>
+                <GridPane hgap="16" vgap="14">
+                    <columnConstraints>
+                        <ColumnConstraints percentWidth="28"/>
+                        <ColumnConstraints percentWidth="72" hgrow="ALWAYS"/>
+                    </columnConstraints>
+                    <Label text="Nome completo" styleClass="field-label" GridPane.rowIndex="0"/>
+                    <TextField fx:id="txtNome" promptText="Ex.: Maria da Silva" maxWidth="Infinity" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+                    <Label text="CPF" styleClass="field-label" GridPane.rowIndex="1"/>
+                    <TextField fx:id="txtCPF" promptText="000.000.000-00" maxWidth="Infinity" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                    <Label text="Telefone" styleClass="field-label" GridPane.rowIndex="2"/>
+                    <TextField fx:id="txtTelefone" promptText="(00) 00000-0000" maxWidth="Infinity" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+                    <Label text="CEP" styleClass="field-label" GridPane.rowIndex="3"/>
+                    <TextField fx:id="txtCEP" promptText="00000-000" maxWidth="Infinity" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+                    <Label text="E-mail" styleClass="field-label" GridPane.rowIndex="4"/>
+                    <TextField fx:id="txtEmail" promptText="cliente@email.com" maxWidth="Infinity" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+                </GridPane>
+                <Separator/>
+                <Label fx:id="lblMensagem" text="" styleClass="status-message" wrapText="true"/>
+                <HBox spacing="10" alignment="CENTER_RIGHT">
+                    <Button text="Voltar" mnemonicParsing="false" onAction="#voltar" styleClass="secondary-button"/>
+                    <Button text="Salvar cliente" mnemonicParsing="false" onAction="#salvar" styleClass="primary-button"/>
+                </HBox>
+            </VBox>
+        </VBox>
+    </content>
+</ScrollPane>
